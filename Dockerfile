@@ -7,8 +7,8 @@ WORKDIR /usr/share/nginx/html
 # Copy the content of the Band Website repository into the container
 COPY . .
 
-# Expose port 80
-EXPOSE 80
+# Expose port 5000
+EXPOSE 5000
 
 # Start Nginx server
 CMD ["nginx", "-g", "daemon off;"]
