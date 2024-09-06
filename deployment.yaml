@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foodz-app-deployment
+spec:
+  replicas: 6  # Number of desired replicas
+  selector:
+    matchLabels:
+      app: foodz-app
+  template:
+    metadata:
+      labels:
+        app: foodz-app
+    spec:
+      containers:
+      - name: foodz-app
+        image: yash5090/foodz-app:latest
+        ports:
+        - containerPort: 5000
